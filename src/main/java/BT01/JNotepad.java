@@ -122,7 +122,7 @@ public class JNotepad extends JFrame {
             }
         });
 
-        
+        // xử lý open
         // Thêm vào phương thức xử lý sự kiện cho nút Open
         itemOpen.addActionListener(new ActionListener() {
             @Override
@@ -203,7 +203,7 @@ public class JNotepad extends JFrame {
         // Mở hộp thoại chọn file
         int returnValue = fileChooser.showOpenDialog(null);
 
-        // Kiểm tra 
+        // Kiểm tra xem người dùng có chọn file không
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
             try (BufferedReader br = new BufferedReader(new FileReader(selectedFile))) {
@@ -221,7 +221,7 @@ public class JNotepad extends JFrame {
 
     //save
     private void saveFile() {
-        if (currentFile != null) {  
+        if (currentFile != null) {  // Nếu đã mở file trước đó
             try (FileWriter writer = new FileWriter(currentFile)) {
                 writer.write(txtEditor.getText());
                 JOptionPane.showMessageDialog(null, "File saved successfully!");
@@ -250,7 +250,7 @@ public class JNotepad extends JFrame {
         });
     }
 
-
+    // xử lý open
     private void createToolBar() {
         //tạo thanh công cụ jtoolbar
         toolbar = new JToolBar();
