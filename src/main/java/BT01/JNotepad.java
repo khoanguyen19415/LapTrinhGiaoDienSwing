@@ -122,7 +122,7 @@ public class JNotepad extends JFrame {
             }
         });
 
-        // xử lý open
+        
         // Thêm vào phương thức xử lý sự kiện cho nút Open
         itemOpen.addActionListener(new ActionListener() {
             @Override
@@ -221,7 +221,7 @@ public class JNotepad extends JFrame {
 
     //save
     private void saveFile() {
-        if (currentFile != null) {  // Nếu đã mở file trước đó
+        if (currentFile != null) { 
             try (FileWriter writer = new FileWriter(currentFile)) {
                 writer.write(txtEditor.getText());
                 JOptionPane.showMessageDialog(null, "File saved successfully!");
