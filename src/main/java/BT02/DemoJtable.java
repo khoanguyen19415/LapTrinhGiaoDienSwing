@@ -82,6 +82,7 @@ public class DemoJtable extends JFrame {
             //get model của JTable
             DefaultTableModel model = (DefaultTableModel) tblTaiKhoan.getModel();
             model.addRow(new Object[]{txtTen.getText(), txtTien.getText()});
+            javax.swing.JOptionPane.showMessageDialog(this, "Thêm thành công", "thông báo", javax.swing.JOptionPane.INFORMATION_MESSAGE);
         });
         //Xóa
         btnXoa.addActionListener((e) -> {
